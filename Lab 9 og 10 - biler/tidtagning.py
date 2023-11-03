@@ -40,3 +40,4 @@ while True:
 
 df = pd.DataFrame({'Dato og klokkeslet': times, "Unix timestamp": unixtimes})
 df.to_excel(filename + ".xlsx", index=False)
+
