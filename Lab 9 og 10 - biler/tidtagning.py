@@ -1,6 +1,8 @@
 import datetime
 import pandas as pd
 import subprocess
+import time
+import threading
 
 try:
     import keyboard
@@ -16,21 +18,33 @@ print("\n Filen gemmes i {}. \n Tidtagning startet. Tryk mellemrum for at gemme 
 
 times = []
 unixtimes = []
+key_pressed = False
 
 def log_time():
     now = datetime.datetime.now()
     times.append(now)
     unixtimes.append(now.timestamp())
-
     print(f"\n Antal tider: {len(times)} | Tid gemt: {now}")
 
+def reset_key_pressed():
+    global key_pressed
+    key_pressed = False
+
 def on_any_key(event):
+    global key_pressed
+    if key_pressed:
+        return
     if event.name == 'space':
         log_time()
+        key_pressed = True
+        threading.Timer(0.1, reset_key_pressed).start()
     elif event.name == 'delete' or event.name == 'backspace':
-        times.pop()
-        unixtimes.pop()
-        print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
+        if times and unixtimes:  # Check if lists are not empty
+            times.pop()
+            unixtimes.pop()
+            print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
+        key_pressed = True
+        threading.Timer(0.1, reset_key_pressed).start()
 
 keyboard.on_press(on_any_key)
 
