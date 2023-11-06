@@ -27,7 +27,7 @@ def log_time():
 def on_any_key(event):
     if event.name == 'space':
         log_time()
-    elif event.name == 'enter':
+    elif event.name == 'delete' or event.name == 'backspace':
         times.pop()
         unixtimes.pop()
         print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
