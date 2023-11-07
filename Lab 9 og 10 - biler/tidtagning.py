@@ -39,7 +39,7 @@ def on_any_key(event):
         key_pressed = True
         threading.Timer(0.1, reset_key_pressed).start()
     elif event.name == 'delete' or event.name == 'backspace':
-        if times and unixtimes:  # Check if lists are not empty
+        if times and unixtimes:
             times.pop()
             unixtimes.pop()
             print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
