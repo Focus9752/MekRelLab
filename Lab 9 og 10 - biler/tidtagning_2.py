@@ -15,15 +15,15 @@ filename = input("Hvilken fil skal tiderne gemmes i? (uden filendelse) \n")
 
 print("\n Filen gemmes i {}. \n Tidtagning startet. Tryk mellemrum for at gemme tider og enter for at slette den sidste tid.".format(filename + ".xlsx"))
 
-times = []
-unixtimes = []
+unixtime = 0
+delta_times = []
 key_pressed = False
 
 def log_time():
+    global time
+    global unixtime
     now = datetime.datetime.now()
-    times.append(now)
-    unixtimes.append(now.timestamp())
-    print(f"\n Antal tider: {len(times)} | Tid gemt: {now}")
+    unixtime = now.timestamp()
 
 def reset_key_pressed():
     global key_pressed
@@ -32,16 +32,18 @@ def reset_key_pressed():
 def on_any_key(event):
     global key_pressed
     if key_pressed:
+        now = datetime.datetime.now()
+        delta_times.append(now.timestamp() - unixtime)
+        print(f"\n Antal tider: {int(len(delta_times))} | Tid gemt: {delta_times[-1]}")
+        key_pressed = False
         return
     if event.name == 'space':
         log_time()
         key_pressed = True
-        threading.Timer(0.1, reset_key_pressed).start()
     elif event.name == 'delete' or event.name == 'backspace':
-        if times and unixtimes:
-            times.pop()
-            unixtimes.pop()
-            print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
+        if delta_times:
+            delta_times.pop()
+            print(f"\nSidste tid slettet | Antal tider: {len(delta_times)}")
         key_pressed = True
         threading.Timer(0.1, reset_key_pressed).start()
 
@@ -51,6 +53,8 @@ while True:
     if keyboard.is_pressed('esc'):
         break
 
-df = pd.DataFrame({'Dato og klokkeslet': times, "Unix timestamp": unixtimes})
+print(delta_times)
+
+df = pd.DataFrame({'Delta_times': delta_times})
 df.to_excel(filename + ".xlsx", index=False)
 
