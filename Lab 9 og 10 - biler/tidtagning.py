@@ -2,7 +2,6 @@ import datetime
 import pandas as pd
 import subprocess
 import threading
-import timeit
 
 try:
     import keyboard
@@ -23,7 +22,7 @@ key_pressed = False
 def log_time():
     now = datetime.datetime.now()
     times.append(now)
-    unixtimes.append(now.timestamp())
+    unixtimes.append(now.timestamp() - timediff)
     print(f"\n Antal tider: {len(times)} | Tid gemt: {now}")
 
 def reset_key_pressed():
@@ -35,10 +34,7 @@ def on_any_key(event):
     if key_pressed:
         return
     if event.name == 'space':
-        starttime = timeit.default_timer()
         log_time()
-        print(f"Time taken: {timeit.default_timer() - starttime}")
-        
         key_pressed = True
         threading.Timer(0.1, reset_key_pressed).start()
     elif event.name == 'delete' or event.name == 'backspace':
@@ -48,7 +44,7 @@ def on_any_key(event):
             print(f"\n Antal tider: {len(times)} | Sidste tid slettet")
         key_pressed = True
         threading.Timer(0.1, reset_key_pressed).start()
-
+    
 keyboard.on_press(on_any_key)
 
 while True:
