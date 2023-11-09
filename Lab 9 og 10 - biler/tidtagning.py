@@ -2,6 +2,7 @@ import datetime
 import pandas as pd
 import subprocess
 import threading
+import timeit
 
 try:
     import keyboard
@@ -19,10 +20,13 @@ times = []
 unixtimes = []
 key_pressed = False
 
+starttime = 0
+
 def log_time():
     now = datetime.datetime.now()
+    timediff = timeit.default_timer() - starttime
     times.append(now)
-    unixtimes.append(now.timestamp())
+    unixtimes.append(now.timestamp() - timediff)
     print(f"\n Antal tider: {len(times)} | Tid gemt: {now}")
 
 def reset_key_pressed():
@@ -30,6 +34,8 @@ def reset_key_pressed():
     key_pressed = False
 
 def on_any_key(event):
+    global starttime
+    starttime = timeit.default_timer()
     global key_pressed
     if key_pressed:
         return
