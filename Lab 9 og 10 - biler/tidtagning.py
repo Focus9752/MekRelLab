@@ -2,6 +2,7 @@ import datetime
 import pandas as pd
 import subprocess
 import threading
+import timeit
 
 try:
     import keyboard
@@ -34,7 +35,10 @@ def on_any_key(event):
     if key_pressed:
         return
     if event.name == 'space':
+        starttime = timeit.default_timer()
         log_time()
+        print(f"Time taken: {timeit.default_timer() - starttime}")
+        
         key_pressed = True
         threading.Timer(0.1, reset_key_pressed).start()
     elif event.name == 'delete' or event.name == 'backspace':
