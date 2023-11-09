@@ -22,7 +22,7 @@ key_pressed = False
 def log_time():
     now = datetime.datetime.now()
     times.append(now)
-    unixtimes.append(now.timestamp() - timediff)
+    unixtimes.append(now.timestamp())
     print(f"\n Antal tider: {len(times)} | Tid gemt: {now}")
 
 def reset_key_pressed():
