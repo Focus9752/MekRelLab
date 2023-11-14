@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1699614359 -1
-  "./references.bib" 1699612973 416 e75801fac92f001563b9decdf0c29e14 ""
-  "main.bcf" 1699614358 107765 db22473c04ff91362473d9b1f50f967d "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1699999133 -1
+  "./references.bib" 1699808468 427 e75801fac92f001563b9decdf0c29e14 ""
+  "main.bcf" 1699999133 107765 db22473c04ff91362473d9b1f50f967d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1699614357 "c:/Users/marcu/OneDrive/Documents/GitHub/MekRelLab/Lab 9 og 10 - biler/rapport/main.tex" "main.pdf" "main" 1699614359 0
+["pdflatex"] 1699999132 "c:/Users/marcu/OneDrive/Documents/GitHub/MekRelLab/Lab 9 og 10 - biler/rapport/main.tex" "main.pdf" "main" 1699999133 0
   "C:/MikTex/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/MikTex/fonts/tfm/public/cm/cmcsc10.tfm" 1136765053 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "C:/MikTex/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -23,10 +23,15 @@
   "C:/MikTex/fonts/tfm/public/cm/cmtt10.tfm" 1136765053 768 1321e9409b4137d6fb428ac9dc956269 ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1247596667 32001 6aeea3afe875097b1eb0da29acd61e28 ""
+  "C:/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
+  "C:/MikTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
+  "C:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/MikTex/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -107,15 +112,16 @@
   "C:/MikTex/tex/latex/tools/array.sty" 1686255640 12691 ddae4e0162a664f166015d992388b742 ""
   "C:/MikTex/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/MikTex/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "C:/Users/marcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699613691 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/marcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1699613585 24125417 3a44b8f4103060d3107bc84065e9f9d5 ""
-  "c:/Users/marcu/OneDrive/Documents/GitHub/MekRelLab/Lab 9 og 10 - biler/rapport/main.tex" 1699614356 1735 ddf0d385de865aa2eac338fd0e03605d ""
-  "img/pbåse.jpg" 1699612974 1350152 ddf5487c3a63c8fa426912e61861136f ""
-  "main.aux" 1699614358 1381 59e2bc648e649ec3574abc18b642b372 "pdflatex"
-  "main.bbl" 1699613747 1924 59addcc551d7b75ab95516bdf3bbb99a "biber main"
-  "main.out" 1699614358 280 5cee76c49a7eef62c8f7ed9a1a1c2481 "pdflatex"
-  "main.run.xml" 1699614358 2310 db40f67e49a473dd53a749eaacbacc6e "pdflatex"
-  "main.tex" 1699614356 1735 ddf0d385de865aa2eac338fd0e03605d ""
+  "C:/Users/marcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699991259 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/marcu/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1699991225 24125494 4ef42e4ffa89a9b0c9f8facdc478dc75 ""
+  "c:/Users/marcu/OneDrive/Documents/GitHub/MekRelLab/Lab 9 og 10 - biler/rapport/main.tex" 1699999132 7502 a2823636a3f8fcdab4a54c2ebc217cd9 ""
+  "img/histogram.png" 1699999053 118432 21cb597f3ff0c4b9b827978f271f6f29 ""
+  "img/pbåse.jpg" 1699808468 1350152 ddf5487c3a63c8fa426912e61861136f ""
+  "main.aux" 1699999133 2612 feca13205a155a126366689ec7a36602 "pdflatex"
+  "main.bbl" 1699991778 1924 59addcc551d7b75ab95516bdf3bbb99a "biber main"
+  "main.out" 1699999133 1123 bec3443a89faafa2fe9357137cef8dcb "pdflatex"
+  "main.run.xml" 1699999133 2310 db40f67e49a473dd53a749eaacbacc6e "pdflatex"
+  "main.tex" 1699999132 7502 a2823636a3f8fcdab4a54c2ebc217cd9 ""
   (generated)
   "main.aux"
   "main.bcf"
