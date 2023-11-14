@@ -28,14 +28,15 @@ sorting=nyt
 \maketitle
 
 \section{Formål}
-Formålet med øvelsen var at bestemme middelfarten af biler på en bestemt strækning.
+Formålet med øvelsen var at måle farten af biler på en bestemt vejstrækning, med henblik på at præsentere dem i et histogram og bestemme deres middelfart samt at gøre sig relevante statistiske overvejelser.
+
 \section{Fremgangsmåde}
 Bilernes fart blev målt i samarbejde med Christian Ringsing, Mie Gravgaard Lassen og Veronika Mantzius Postgaard.\\
 \\En person placeres mellem to tydelige markeringer på vejen (ved dette forsøg blev der benyttet to parkeringsbåse, se fig. \ref{fig:pplads}). Afstanden mellem markeringerne opmåles. Vha. et Python-script\cite{timescript} gemmes tidspunkterne hvor en given bils forhjul passerer hver markering. Trækkes den første tid fra den anden fås tiden bilen er om at krydse strækningen mellem de to markeringer, hvilket gør det muligt at finde bilens gennemsnitsfart over strækningen med følgende formel:
 
-\[v = \frac{l}{t}\]
+\[v = \frac{d}{t}\]
 
-hvor $l$ er afstanden mellem markeringerne og $t$ er tiden bilen var om at krydse strækningen.
+hvor $d$ er afstanden mellem markeringerne og $t$ er tiden bilen var om at krydse strækningen.
 
 \begin{figure}[H]
     \centering
