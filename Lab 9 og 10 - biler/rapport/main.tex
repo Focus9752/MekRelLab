@@ -20,8 +20,9 @@ sorting=nyt
 \setlength\parindent{0pt}
 
 \title{Labuge 9/10 - Mål bilers fart}
-\author{Marcus Koschmieder Krogsgaard}
-\date{15. november 2023}
+\author{Marcus Koschmieder Krogsgaard\\
+\small Med hjælp fra Christian Ringsing, Mie Gravgaard Lassen og Veronika Mantzius Postgaard}
+\date{09. november 2023, kl. 15:00}
 
 \begin{document}
 
@@ -35,7 +36,7 @@ Formålet med øvelsen var at måle farten af en række biler på en vejstrækni
 \section{Fremgangsmåde} \label{fremgangsmaade}
 Bilernes fart blev målt i samarbejde med Christian Ringsing, Mie Gravgaard Lassen og Veronika Mantzius Postgaard.\\
 
-En person placeres midt imellem to tydelige markeringer på vejen (til dette forsøg blev der benyttet to parkeringsbåse, se fig. \ref{fig:pplads}). Afstanden mellem markeringerne opmåles fra kanten af den ene markering til kanten af den anden.\\
+Personen der skal foretage målingerne placeres midt imellem to tydelige markeringer på vejen (ved dette forsøg blev der benyttet to parkeringsbåse, se fig. \ref{fig:pplads}). Afstanden mellem markeringerne opmåles fra kanten af den ene markering til kanten af den anden.\\
 
 Når en bils forhjul passerer hver markering, gemmes tidspunktet, hvor hjulet kørte over markeringen. Den første tid trækkes fra den anden og tiden bilen var om at krydse strækningen gemmes i en fil. Dette foregår vha. et Python-script\cite{timescript}. Bemærk at der ikke foretages målinger ved meget langsom eller stillestående trafik (køkørsel).\\
 
@@ -60,7 +61,7 @@ Ved dette forsøg blev målingerne foretaget på Østerbrogade nær Trianglen, i
 
 \subsection{Systematiske usikkerheder}
 
-Der er to væsentlige systematiske usikkerheder ved dette forsøg, nemlig usikkerheden på målingen af tiden det tog bilerne at krydse strækningen og usikkerheden på længden af strækningen de krydsede.\\
+Der er to systematiske usikkerheder ved dette forsøg, nemlig usikkerheden på målingen af tiden det tog bilerne at krydse strækningen og usikkerheden på længden af strækningen de krydsede.\\
 
 Reaktionstiden af Marcus Koschmieder Krogsgaard, der foretog målingerne, vurderes til at være $\pm$ 0,2 s. Denne værdi er benyttet som usikkerheden på målingen af tiden det tog bilerne at krydse strækningen.\\
 
@@ -95,7 +96,7 @@ Standardafvigelsen af farten af bilerne er bestemt til at være $\pm$ 5,69 km/h 
 
 Histogrammet (fig. \ref{fig:histogram}) viser at bilernes fart er tilnærmelsesvist normalfordelt. Der lader dog til at være en række outliers der kørte relativt hurtigt i forhold til den gennemsnitlige bil.\\
 
-Det er desuden tydeligt at der er en tendens til at bilerne kørte langt under fartgrænsen, hvilket giver god mening, da målingerne er foretaget i myldretiden på en meget traffikeret vej. Det regnede også imens målingerne blev foretaget, hvilket nok har ført til endnu tættere trafik end normalt.\\
+Det er desuden tydeligt at der er en tendens til at bilerne kørte langt under fartgrænsen, hvilket giver god mening, da målingerne blev foretaget i myldretiden på en meget traffikeret vej. Det regnede også imens målingerne blev foretaget, hvilket nok har ført til endnu tættere trafik end normalt.\\
 
 Med hensyn til usikkerheden på middelværdien af hastigheden er $\pm$ 2 km/h en relativt lille usikkerhed på under 10\% af middelværdien. Man kunne dog godt have ønsket sig en mindre usikkerhed, givet det store antal målinger. Størrelsen af usikkerheden skyldes den store systematiske usikkerhed på længden af strækningen og på tidsmålingerne. \\
 
@@ -109,13 +110,15 @@ Desværre var der problemer med at synkronisere de to computere, dels fordi dere
 
 Disse forskelle viste sig til at være væsentlige nok til at gøre vores data ubrugelige. Uheldigvis gik det først op for os efter at vi havde foretaget ca. 300 målinger...\\
 
-Vi var derfor nødt til at ændre vores fremgangsmåde til den der er beskrevet i sektion \ref{fremgangsmaade}.
+Denne metode havde en betydeligt laver usikkerhed på strækningen bilerne bevægede sig, da det var nemmere at vurdere hvornår en bil passerede observertøren når observertøren kiggede ligeud i stedet for at se på en markering der lå et stykke til siden for observatøren. Den systematiske usikkerhed på tiden var som sagt også mindre væsentlig idet længden af tidsintervallerne steg, mens usikkerheden var den samme som ved det endelige forsøg.\\
+
+Det er derfor ærgerligt, at vi var nødt til at ændre vores fremgangsmåde til den der er beskrevet i sektion \ref{fremgangsmaade}.
 
 \section{Konklusion}
 
 Der blev foretaget 243 målinger med en systematisk usikkerhed på $\pm$ 0,5 m for længden af strækningen og $\pm$ 0,2 s for tiden bilerne var om at passere den.\\
 
-Middelfarten blev bestemt til $(27 \pm 2)$ km/h.
+Middelfarten af bilerne blev bestemt til $(27 \pm 2)$ km/h.
 
 \section{Referencer}
 \printbibliography[
